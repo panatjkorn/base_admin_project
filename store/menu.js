@@ -12,7 +12,9 @@ const state = () => {
   }
   
   const mutations = {
-
+    setMenuToState(state,post) {
+      state.menu = post.menuAdmin;
+    },
   }
   
   const actions = {
