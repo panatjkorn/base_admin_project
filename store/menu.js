@@ -1,3 +1,5 @@
+let menuAdmin = [];
+
 const state = () => {
     return {
       menu : [
@@ -18,7 +20,15 @@ const state = () => {
   }
   
   const actions = {
-
+    async setMenu (vuexContext, context) {
+      if(context == true) {
+        vuexContext.commit("setMenuToState", {
+          menuAdmin
+      })
+    }
+    
+    menuAdmin = []
+    }
   }
   
   const getters = {
