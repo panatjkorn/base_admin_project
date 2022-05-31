@@ -18,7 +18,21 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    '@/assets/css/main.css',
   ],
+
+  styleResources: {
+    scss: [
+      '~/assets/sass/custom.scss',
+      '~/assets/sass/app.scss',
+    ],
+  },
+
+  tailwindcss: {
+    cssPath: '~/assets/sass/_tailwind.scss',
+    jit: true,
+    exposeConfig: true,
+  },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
@@ -35,9 +49,11 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxtjs/style-resources'
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    
   }
 }
